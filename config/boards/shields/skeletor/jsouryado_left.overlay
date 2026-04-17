@@ -21,16 +21,4 @@ n/*
                 <&gpio0 9 GPIO_ACTIVE_HIGH>;
 };
 
-/ {
-    wired_split {
-        compatible = "zmk,wired-split";
-        device = <&uart0>;
-    };
-};
 
-/* make sure the hardware UART exists */
-&uart0 {
-    status = "okay";
-    current-speed = <1000000>;
-    pinctrl-0 = <&uart0_default>;
-};
