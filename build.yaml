@@ -19,22 +19,23 @@
 #
 ---
 include:
-  # LEFT (peripheral / BLE half)
+  # LEFT (peripheral)
   - board: nice_nano_v2
     shield: jsouryado_left
     artifact-name: jsouryado-left
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
 
-  # RIGHT (peripheral / BLE half)
+  # RIGHT (peripheral)
   - board: nice_nano_v2
     shield: jsouryado_right
     artifact-name: jsouryado-right
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
 
-  # DONGLE (peripheral / BLE half)
+  # DONGLE (central)
   - board: nice_nano_v2
     shield: jsouryado_dongle
     artifact-name: jsouryado-dongle
+    cmake-args: -DCONFIG_ZMK_SPLIT=y
 
   - board: nice_nano_v2
     shield: settings_reset
