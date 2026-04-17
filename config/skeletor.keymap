@@ -78,7 +78,7 @@
 &trans          &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &kp K_CUT      &trans     &trans  &trans  &trans  &trans
 &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp K_COPY     &trans     &trans  &trans  &trans  &trans
 &msc SCRL_DOWN  &trans          &trans          &trans           &kp K_PASTE    &trans     &trans  &trans  &trans  &trans
-                &trans          &trans          &mkp MCLK        &mkp LCLK      &mkp RCLK  &trans  &trans  &trans
+                &trans          &trans          &mkp LCLK        &mkp RCLK      &mkp RCLK  &trans  &trans  &trans
                 &trans          &trans          &trans           &trans         &trans     &trans  &trans  &trans
             >;
         };
