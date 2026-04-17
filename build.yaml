@@ -24,15 +24,20 @@ include:
     shield: jsouryado_left
     config: boards/shields/jsouryado/jsouryado_left.conf
     artifact-name: jsouryado-left
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
 
   # RIGHT (peripheral / BLE half)
   - board: nice_nano_v2
     shield: jsouryado_right
     config: boards/shields/jsouryado/jsouryado_right.conf
     artifact-name: jsouryado-right
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
 
   # DONGLE (peripheral / BLE half)
   - board: nice_nano_v2
     shield: jsouryado_dongle
     config: boards/shields/jsouryado/jsouryado_dongle.conf
     artifact-name: jsouryado-dongle
+
+  - board: nice_nano
+    shield: settings_reset
