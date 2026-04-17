@@ -13,7 +13,6 @@
     behaviors {
         hm: hm {
             compatible = "zmk,behavior-hold-tap";
-            label = "HM";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
