@@ -18,3 +18,19 @@
 #     artifact-name: corne_left_with_studio
 #
 ---
+include:
+  # LEFT (peripheral / BLE half)
+  - board: nice_nano_v2
+    shield: jsouryado_left
+    artifact-name: jsouryado-left
+
+  # RIGHT (peripheral / BLE half)
+  - board: nice_nano_v2
+    shield: jsouryado_right
+    artifact-name: jsouryado-right
+  
+  # DONGLE (peripheral / BLE half)
+  - board: nice_nano_v2
+    shield: jsouryado_dongle
+    artifact-name: jsouryado-dongle
+
