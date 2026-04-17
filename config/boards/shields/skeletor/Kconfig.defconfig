@@ -23,3 +23,10 @@ config BT_MAX_PAIRED
     default 6
 
 endif
+
+if SHIELD_JSOURYADO_LEFT || SHIELD_JSOURYADO_RIGHT || SHIELD_JSOURYADO_DONGLE
+
+config ZMK_SPLIT
+    default y
+
+endif
