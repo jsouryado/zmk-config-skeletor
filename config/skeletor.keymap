@@ -22,6 +22,15 @@
         };
     };
 
+    macros {
+        select_star: select_star {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(S) &kp LS(E) &kp LS(L) &kp LS(E) &kp LS(C) &kp LS(T) &kp SPACE &kp STAR &kp RET &kp LS(F) &kp LS(R) &kp LS(O) &kp LS(M) &kp SPACE>;
+            label = "SELECT_STAR";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -39,7 +48,7 @@
 &hm LEFT_GUI A  &hm LEFT_ALT S    &hm LCTRL D        &hm LEFT_SHIFT F  &kp G           &kp H           &hm RIGHT_SHIFT J  &hm RCTRL K  &hm RIGHT_ALT L  &hm RIGHT_GUI SEMICOLON
 &lt 6 Z         &kp X             &kp C              &kp V             &kp B           &kp N           &kp M              &kp COMMA    &kp DOT          &lt 6 FSLH
                 &kp LEFT_BRACE    &lt 5 RIGHT_BRACE  &lt 1 BACKSPACE   &lt 2 DEL       &lt 3 SPACE     &lt 4 RET          &kp LPAR     &kp RPAR
-                &kp SINGLE_QUOTE  &kp EQUAL          &kp ESCAPE        &kp NUMBER_4    &lt 5 CAPSLOCK  &kp TAB            &trans       &trans
+                &kp SINGLE_QUOTE  &kp EQUAL          &kp ESCAPE        &select_star    &lt 5 CAPSLOCK  &kp TAB            &trans       &trans
             >;
         };
 
@@ -66,7 +75,7 @@
         LAYER_SYMBOL {
             bindings = <
 &kp LBKT        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RBKT          &kp PERIOD       &none   &none   &none   &none   &none
-&kp LEFT_BRACE  &kp EQUAL             &kp UNDER              &kp RIGHT_BRACE   &kp DOLLAR       &none   &none   &none   &none   &none
+&kp LEFT_BRACE  &kp EQUAL             &kp UNDER              &kp DOLLAR        &kp ASTRK        &none   &none   &none   &none   &none
 &kp LESS_THAN   &kp PIPE              &kp MINUS              &kp GREATER_THAN  &kp BACKSLASH    &none   &none   &none   &none   &none
                 &trans                &trans                 &kp AMPS          &none            &kp AT  &none   &none   &none
                 &trans                &trans                 &trans            &trans           &trans  &trans  &trans  &trans
