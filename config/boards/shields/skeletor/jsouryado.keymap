@@ -45,7 +45,7 @@
 &hm LGUI A      &hm LALT S        &hm LCTRL D        &hm LSHFT F       &kp G           &kp H           &hm RSHFT J        &hm RCTRL K  &hm RALT L       &hm RGUI SEMICOLON
 &lt 6 Z          &kp X             &kp C              &kp V             &kp B           &kp N           &kp M              &kp COMMA    &kp DOT          &lt 6 FSLH
 
-                &kp LEFT_BRACE    &lt 5 RIGHT_BRACE    &lt 1 BACKSPACE     &lt 2 DEL         &lt 3 SPACE       &lt 4 RET            &kp LPAR     &kp RPAR
+                &kp LEFT_BRACE    &lt 5 RIGHT_BRACE    &lt 1 BACKSPACE     &lt 2 DEL         &lt 3 RET       &lt 4 SPACE          &kp LPAR     &kp RPAR
                 &kp SINGLE_QUOTE  &kp EQUAL          &kp ESCAPE        &select_star    &lt 5 CAPSLOCK    &kp TAB            &trans       &trans
             >;
         };
