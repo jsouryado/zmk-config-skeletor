@@ -6,6 +6,9 @@
 
 #include "jsouryado.dtsi"
 
+&default_transform {
+    col-offset = <5>;
+};
 
 &kscan0 {
     diode-direction = "col2row";
