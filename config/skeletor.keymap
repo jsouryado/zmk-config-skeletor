@@ -18,6 +18,7 @@
             tapping-term-ms = <180>;
             quick-tap-ms = <150>;
             flavor = "balanced";
+            hold-trigger-key-positions = <24 14 33 4>;
         };
     };
 
@@ -26,6 +27,27 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(S) &kp LS(E) &kp LS(L) &kp LS(E) &kp LS(C) &kp LS(T) &kp SPACE &kp STAR &kp RET &kp LS(F) &kp LS(R) &kp LS(O) &kp LS(M) &kp SPACE>;
+        };
+
+        Copy: Copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(C)>;
+            label = "COPY";
+        };
+
+        Cut: Cut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(X)>;
+            label = "CUT";
+        };
+
+        Paste: Paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(V)>;
+            label = "PASTE";
         };
     };
 
@@ -48,11 +70,11 @@
 
         LAYER_Cursor {
             bindings = <
-&trans  &trans  &trans  &trans  &kp K_UNDO                       &trans          &kp HOME   &kp UP     &kp END     &trans
-&trans  &trans  &trans  &trans  &kp K_REDO                       &trans          &kp LEFT   &kp DOWN   &kp RIGHT   &trans
-&trans  &trans  &trans  &trans  &kp C_AC_COPY                    &trans          &kp PG_UP  &kp PG_DN  &kp INSERT  &kp DEL
-        &trans  &trans  &trans  &trans                           &kp C_AC_PASTE  &trans     &trans     &trans
-        &trans  &trans  &trans  &trans           &trans  &trans  &trans          &trans
+&trans  &trans  &trans  &trans  &kp K_UNDO                    &trans       &kp HOME   &kp UP     &kp END     &trans
+&trans  &trans  &trans  &trans  &kp K_REDO                    &trans       &kp LEFT   &kp DOWN   &kp RIGHT   &trans
+&trans  &trans  &trans  &trans  &kp K_COPY                    &trans       &kp PG_UP  &kp PG_DN  &kp INSERT  &kp DEL
+        &trans  &trans  &trans  &trans                        &kp K_PASTE  &trans     &trans     &trans
+        &trans  &trans  &trans  &trans        &trans  &trans  &trans       &trans
             >;
         };
 
