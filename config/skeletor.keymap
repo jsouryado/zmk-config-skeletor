@@ -49,6 +49,20 @@
             bindings = <&kp LC(V)>;
             label = "PASTE";
         };
+
+        Undo: Undo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(Z)>;
+            label = "UNDO";
+        };
+
+        Redo: Redo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(Y)>;
+            label = "REDO";
+        };
     };
 
     keymap {
@@ -70,11 +84,11 @@
 
         LAYER_Cursor {
             bindings = <
-&trans  &trans  &trans  &trans  &kp K_UNDO                    &trans       &kp HOME   &kp UP     &kp END     &trans
-&trans  &trans  &trans  &trans  &kp K_REDO                    &trans       &kp LEFT   &kp DOWN   &kp RIGHT   &trans
-&trans  &trans  &trans  &trans  &kp K_COPY                    &trans       &kp PG_UP  &kp PG_DN  &kp INSERT  &kp DEL
-        &trans  &trans  &trans  &trans                        &kp K_PASTE  &trans     &trans     &trans
-        &trans  &trans  &trans  &trans        &trans  &trans  &trans       &trans
+&trans  &trans  &trans  &trans  &Undo                     &trans  &kp HOME   &kp UP     &kp END     &trans
+&trans  &trans  &trans  &trans  &Redo                     &trans  &kp LEFT   &kp DOWN   &kp RIGHT   &trans
+&trans  &trans  &trans  &Cut    &Copy                     &trans  &kp PG_UP  &kp PG_DN  &kp INSERT  &kp DEL
+        &trans  &trans  &trans  &trans                    &Paste  &trans     &trans     &trans
+        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
 
