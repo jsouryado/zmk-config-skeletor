@@ -63,6 +63,41 @@
             bindings = <&kp LC(Y)>;
             label = "REDO";
         };
+
+        select_all: select_all {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A)>;
+            label = "SELECT_ALL";
+        };
+
+        select_left: select_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(HOME)>;
+            label = "SELECT_LEFT";
+        };
+
+        select_right: select_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(END)>;
+            label = "SELECT_RIGHT";
+        };
+
+        select_line: select_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&select_left &select_right>;
+            label = "SELECT_LINE";
+        };
+
+        select_word: select_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LEFT_ARROW) &kp LC(LS(RIGHT))>;
+            label = "SELECT_WORD";
+        };
     };
 
     keymap {
@@ -84,11 +119,11 @@
 
         LAYER_Cursor {
             bindings = <
-&trans  &trans  &trans  &trans  &Undo                     &trans  &kp HOME   &kp UP     &kp END     &trans
-&trans  &trans  &trans  &trans  &Redo                     &trans  &kp LEFT   &kp DOWN   &kp RIGHT   &trans
-&trans  &trans  &trans  &Cut    &Copy                     &trans  &kp PG_UP  &kp PG_DN  &kp INSERT  &kp DEL
-        &trans  &trans  &trans  &trans                    &Paste  &trans     &trans     &trans
-        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+&trans  &trans        &Undo         &Redo       &Cut                           &Cut          &Undo         &kp UP       &Redo          &trans
+&trans  &trans        &trans        &trans      &Copy                          &Copy         &kp LEFT      &kp DOWN     &kp RIGHT      &trans
+&trans  &select_line  &select_word  &kp K_FIND  &Paste                         &Paste        &kp HOME      &kp PAGE_UP  &kp PAGE_DOWN  &kp END
+        &trans        &trans        &trans      &trans                         &select_line  &select_word  &trans       &trans
+        &trans        &trans        &trans      &trans    &trans  &select_all  &trans        &trans
             >;
         };
 
